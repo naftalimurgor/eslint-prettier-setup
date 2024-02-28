@@ -98,4 +98,17 @@ Add setup so Eslint can lint our code while `prettier` makes our code pretty as 
 }
 ```
 
+## Update `package.json`
+
+```javascript
+{
+  scripts: {
+    ...
+    "build:module": "tsc -p tsconfig.module.json",
+    "lint": "eslint --ext .ts . ",
+    ...
+  }
+}
+```
+
 And we are good to go!

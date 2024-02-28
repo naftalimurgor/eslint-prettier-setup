@@ -49,13 +49,25 @@ Installing @typescript-eslint/eslint-plugin@latest, @typescript-eslint/parser@la
 ```
 
 ### 3. Prettier setup
+Add `prettier`:
 
+```sh
+npm install -D prettier
+```
 Add the following devDependecy to enable `Prettier` and `Eslint` to work together:
-
-`@typescript-eslint/parser`
 
 ```sh
 npm i --save-dev @typescript-eslint/parser
+```
+- Our `.prettierrc` config in the project root:
+
+```javascript
+// .pettierrc.json
+{
+  "semi": false, // Specify if you want to print semicolons at the end of statements
+  "singleQuote": true, // If you want to use single quotes
+  "arrowParens": "avoid", // Include parenthesis around a sole arrow function parameter
+}
 ```
 
 Add setup so Eslint can lint our code while `prettier` makes our code pretty as per the style chosen.
@@ -64,6 +76,7 @@ Add setup so Eslint can lint our code while `prettier` makes our code pretty as 
 1. `eslint`: ESLint core library
 2. `@typescript-eslint/parser`: A parser that allows ESLint to understand TypeScript code
 3. `@typescript-eslint/eslint-plugin`: Plugin with a set of recommended TypeScript rules
+4. `prettier`: - this adds prettier to our project to be able to make our code cleaner
 
 ### 4. Integrate `Eslint` to whatever editor you are using:
 Inegrate `Eslint` with your code editor you are using, for Vscode, we use the [Eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) vscode extension.

@@ -81,4 +81,14 @@ Add setup so Eslint can lint our code while `prettier` makes our code pretty as 
 ### 4. Integrate `Eslint` to whatever editor you are using:
 Inegrate `Eslint` with your code editor you are using, for Vscode, we use the [Eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) vscode extension.
 
+Navigate to settings > edit `settings.json` and add the following to override the default JavaScript Formatter and use `Prettier` instead:
+
+```javascript
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  ...
+}
+```
+
 And we are good to go!
